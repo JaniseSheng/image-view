@@ -1,0 +1,11 @@
+@value ui-red, ui-white from 'ui-colors';
+
+.upload-wrapper {
+  border: 1px solid ui-white;
+}
+
+.upload-zone {
+  & > div {
+    height: 200px;
+  }
+}

@@ -1,0 +1,9 @@
+@value ui-red, ui-white from 'ui-colors';
+
+.header {
+  background-color: ui-red;
+  & p {
+    color: ui-white;
+    padding: 12px;
+  }
+}
