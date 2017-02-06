@@ -1,0 +1,14 @@
+@import "custom";
+
+/*------------------- Theme -------------------*/
+
+:global(.theme) {
+  &:global(.bright) {
+    color: var(--fiord);
+    background-color: var(--zumthor);
+  }
+  &:global(.dark) {
+    color: var(--zumthor);
+    background-color: var(--midnight);
+  }
+}

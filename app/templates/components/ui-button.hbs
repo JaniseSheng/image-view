@@ -1,0 +1,17 @@
+{{#if loading}}
+  <div local-class="loading">
+    {{ui-icon 'circle-loading' 40 40}}
+  </div>
+{{/if}}
+<div local-class="wrapper">
+  {{#if (or icon image)}}
+    {{ui-icon icon type=type image=image radius=radius size=iconSize viewBox=viewBox}}
+  {{/if}}
+  {{#if text}}
+    <span>{{text}}</span>
+  {{/if}}
+  {{#if extend}}
+    {{ui-icon 'arrows-16px-3_small-down'}}
+  {{/if}}
+  {{yield}}
+</div>

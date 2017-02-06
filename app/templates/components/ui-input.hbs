@@ -1,0 +1,18 @@
+{{#if icon}}
+  <div local-class="{{concat 'label-icon ' inside}}">
+    {{ui-icon icon}}
+  </div>
+{{/if}}
+<div local-class="wrapper {{if error 'error'}}">
+  {{input
+    type=type
+    name=name
+    placeholder=placeholder
+    value=value
+    required=true
+    disabled=disabled
+    readonly=readonly}}
+  {{#if placeholderIcon}}
+    {{ui-icon icon=placeholderIcon}}
+  {{/if}}
+</div>

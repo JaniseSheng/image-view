@@ -1,0 +1,32 @@
+<thead>
+<tr>
+  <th>
+    <span>id</span>
+    {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+  </th>
+  <th>
+    <span>图片</span>
+    {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+  </th>
+  <th>
+    <span>名称</span>
+    {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+  </th>
+  <th>
+    {{ui-button '全部删除' color='blue' icon='ui-16px-1_trash'}}
+  </th>
+</tr>
+</thead>
+<tbody>
+{{#each model as |item|}}
+  <tr>
+    <th><span>{{item.id}}</span></th>
+    <th><img src={{item.url}}/></th>
+    <th><span>{{item.text}}</span></th>
+    <th>
+      {{ui-button '编辑' color='blue' icon='ui-16px-1_trash'}}
+      {{ui-button '删除' color='blue' icon='ui-16px-1_trash-simple' click=(action 'deleteImageById' item.id)}}
+    </th>
+  </tr>
+{{/each}}
+</tbody>
