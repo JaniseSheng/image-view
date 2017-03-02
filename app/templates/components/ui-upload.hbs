@@ -1,8 +1,26 @@
 <form method="post" enctype=”multipart/form-data”>
-  <input type="text" name="text">
-  <input type="file" name="picture">
+  {{#if updateId}}
+    <input class="upload-id" type="text" name="id"
+           value={{updateId}}
+           style='display:none'>
+  {{/if}}
+  <div local-class="image-wrapper">
+    <input class="upload-image"
+           data-input-file
+           type="file"
+           name="picture"
+           id="ember-input-upload"
+           onchange={{action 'handleChange'}}>
+    <label for="ember-input-upload">
+      {{#if imgUrl}}
+        <img src={{imgUrl}}>
+      {{else}}
+        {{ui-icon 'arrows-16px-2_square-upload' 36}}
+        <span>
+        上传图片
+      </span>
+      {{/if}}
+    </label>
+  </div>
+  <input class="upload-text" placeholder="说些什么吧。。。" data-input-text type="text" name="text">
 </form>
-
-<button onclick={{action 'upload'}} >
-  图片上传
-</button>

@@ -1,0 +1,44 @@
+<table>
+  <thead>
+  <tr>
+    <th>
+      <span>id</span>
+      {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+    </th>
+    <th>
+      <span>图片</span>
+      {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+    </th>
+    <th>
+      <span>名称</span>
+      {{ui-icon 'arrows-16px-1_tail-triangle-up' 10}}
+    </th>
+    <th>
+      {{ui-button '全部删除' color='blue' icon='ui-16px-1_trash' click=(action 'deleteAllImage')}}
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each model as |item|}}
+    <tr id={{concat 'list-' item.id}}>
+      <td><span>{{item.id}}</span></td>
+      <td><img class="img" src={{item.url}}/></td>
+      <td><span class="text">{{item.text}}</span></td>
+      <td>
+        {{ui-button '编辑' color='blue' icon='ui-16px-1_trash'
+                    click=(action 'toogleUploadWrapper' item.id (concat 'list-' item.id))}}
+        {{ui-button '删除' color='blue' icon='ui-16px-1_trash-simple' click=(action 'deleteImageById' item.id)}}
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+{{#if update-id}}
+  <div local-class="upload-wrapper">
+    <div local-class="upload-block">
+      {{ui-upload updateId=update-id}}
+      {{ui-button '确定' click=(action 'uploadImage')}}
+      {{ui-button '取消' click=(action 'toogleUploadWrapper' '')}}
+    </div>
+  </div>
+{{/if}}

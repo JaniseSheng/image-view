@@ -15,13 +15,4 @@ export default Component.extend({
     const iconColor = get(this, 'iconColor');
     return icon ? htmlSafe(`<use fill="${iconColor}" xlink:href="#${icon}"></use>`) : null;
   }),
-
-  radius: 0,
-  alt: null,
-  imageStyle: computed('image', function() {
-    const image = get(this, 'image');
-    const radius = get(this, 'radius');
-    const size = get(this, 'size');
-    return image ? htmlSafe(`border-radius: ${radius}px; background-image: url('${image}'); width: ${size}px; height: ${size}px;`) : null;
-  }),
 }).reopenClass({positionalParams: ['icon', 'size', 'viewBox']});

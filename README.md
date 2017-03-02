@@ -1,7 +1,5 @@
-# Sxx-images-show
+# images-show
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
 
@@ -16,14 +14,15 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd sxx-images-show`
+* `cd images-show`
 * `npm install`
 * `bower install`
 
 ## Running / Development
+* `ember serve or s`
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* 上传图片:`http://localhost:5200`
+* 图片管理:`http://localhost:5200/manage`
 
 ### Code Generators
 

@@ -1,13 +1,5 @@
-{{#if image}}
-  <div class='ui-profile' local-class='{{type}}' style={{imageStyle}}></div>
-{{else}}
-  <svg class='ui-icon' local-class='{{type}} {{color}}' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width={{concat size 'px'}} height={{concat size 'px'}} viewBox="0 0 {{viewBox}} {{viewBox}}">
-    {{#if (eq type 'symbols')}}
-      <rect fill={{fill}} x="0" y="0" width={{size}} height={{size}} rx="12"></rect>
-    {{/if}}
-    {{#if (eq type 'logo')}}
-      <rect fill={{fill}} x="0" y="0" width={{size}} height={{size}} rx="4"></rect>
-    {{/if}}
-    {{xlink}}
-  </svg>
-{{/if}}
+<svg class='ui-icon' local-class='{{type}} {{color}}' version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width={{concat size 'px'}} height={{concat size 'px'}}
+     viewBox="0 0 {{viewBox}} {{viewBox}}">
+  {{xlink}}
+</svg>
